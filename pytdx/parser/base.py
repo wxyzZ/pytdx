@@ -45,6 +45,7 @@ class BaseParser(object):
         self.rsp_header = None
         self.rsp_body = None
         self.rsp_header_len = RSP_HEADER_LEN
+        self.retry_send = 1
 
         if lock:
             self.lock = lock
@@ -106,6 +107,10 @@ class BaseParser(object):
                 self.client.recv_pkg_num += 1
                 self.client.recv_pkg_bytes += self.rsp_header_len
                 _, _, _, zipsize, unzipsize = struct.unpack("<IIIHH", head_buf)
+                if unzipsize == 30733:
+                    self.retry_send = 1
+                else:
+                    self.retry_send = 0
                 if DEBUG:
                     log.debug("zip size is: " + str(zipsize))
                 body_buf = bytearray()
@@ -145,4 +150,5 @@ class BaseParser(object):
             else:
                 log.debug("head_buf is not 0x10")
                 raise ResponseHeaderRecvFails("head_buf is not 0x10 : " + str(head_buf))
+
 

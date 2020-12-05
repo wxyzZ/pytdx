@@ -5,6 +5,7 @@ from pytdx.helper import get_datetime, get_volume, get_price
 from collections import OrderedDict
 import struct
 import six
+import sys
 
 
 """
@@ -36,6 +37,12 @@ class GetFinanceInfo(BaseParser):
             code = code.encode("utf-8")
         pkg = bytearray.fromhex(u'0c 1f 18 76 00 01 0b 00 0b 00 10 00 01 00')
         pkg.extend(struct.pack(u"<B6s", market, code))
+        # pkg = bytearray.fromhex(u'0c4d109c000168006800d002010036303131363602003630313136362e74787400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000007499ae470000697f000000000000')
+        # pkg = bytearray.fromhex(u'0c4e109c000168006800d002010036303131363602003630313136362e74787400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000007499aebf00006907000000000000')
+        # pkg = bytearray.fromhex(u'0c51109c000168006800d002010036303131323802003630313132382e74787400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000007499bc5100005797000000000000')
+        # pkg = bytearray.fromhex(u'0c52109c000168006800d002010036303131323802003630313132382e74787400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000007499bcc90000571f000000000000')
+
+
         self.send_pkg = pkg
 
     def parseResponse(self, body_buf):
@@ -43,7 +50,7 @@ class GetFinanceInfo(BaseParser):
         pos += 2 #skip num ,we only query 1 in this case
         market, code = struct.unpack(u"<B6s",body_buf[pos: pos+7])
         pos += 7
-
+        # print(bytes.decode(body_buf,encoding="gb2312"))
         (
             liutongguben,
             province,
@@ -131,5 +138,5 @@ if __name__ == '__main__':
     import pprint
     from pytdx.hq import TdxHq_API
     api = TdxHq_API()
-    with api.connect():
-        pprint.pprint(api.get_finance_info(0, "000166"))
+    with api.connect('119.147.212.81', 7709):
+        pprint.pprint(api.get_finance_info(1, "601169"))

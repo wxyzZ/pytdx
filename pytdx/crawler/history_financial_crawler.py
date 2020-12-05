@@ -85,7 +85,7 @@ class HistoryFinancialCrawler(BaseCralwer):
         api = TdxHq_API()
         api.need_setup = False
         # calc.tdx.com.cn, calc2.tdx.com.cn
-        with api.connect(ip="120.76.152.87"):
+        with api.connect(ip="202.108.253.130"):
             content = api.get_report_file_by_size("tdxfin/" + filename, filesize=filesize, reporthook=reporthook)
             if path_to_download is None:
                 download_file = tempfile.NamedTemporaryFile(delete=True)
@@ -115,6 +115,7 @@ class HistoryFinancialCrawler(BaseCralwer):
             for _file in os.listdir(tmpdir):
                 if _file.endswith(".dat"):
                     datfile = open(os.path.join(tmpdir, _file), "rb")
+                    # datfile = open("D:/stock/test/new_tdx7.43/vipdoc/cw/gpsh600036.dat", "rb")
 
             if datfile is None:
                 raise Exception("no dat file found in zip archive")
@@ -162,6 +163,7 @@ class HistoryFinancialCrawler(BaseCralwer):
 
 
         df =  pd.DataFrame(data=data, columns=col)
+        df.to_csv("./a.csv",index=False)
         df.set_index('code', inplace=True)
         return df
 
@@ -177,16 +179,18 @@ if __name__ == '__main__':
     print(df["filename"])
     print(df["filename"].str.contains("gpcw20190630.zip").any())
 
+    # result = datacrawler.parse(download_file=fp)
+    # print(datacrawler.to_df(data=result))
     # 读取其中一个
     
-    # filename = list_data[1]['filename']
-    # filesize = list_data[1]["filesize"]
+    filename = list_data[1]['filename']
+    filesize = list_data[1]["filesize"]
     
-    # datacrawler = HistoryFinancialCrawler()
-    # pd.set_option('display.max_columns', None)
+    datacrawler = HistoryFinancialCrawler()
+    pd.set_option('display.max_columns', None)
 
-    # result = datacrawler.fetch_and_parse(reporthook=demo_reporthook, filename=filename, filesize=filesize, path_to_download="/tmp/tmpfile.zip")
+    # result = datacrawler.fetch_and_parse(reporthook=demo_reporthook, filename=filename, filesize=filesize, path_to_download="./tmpfile.zip")
     # print(result)
-    # with open(r"/tmp/tmpfile.zip", "rb") as fp:
-    #     result = datacrawler.parse(download_file=fp)
-    #     print(datacrawler.to_df(data=result))
+    with open(r"D:/stock/gjzq/vipdoc/cw/gpcw20200630.zip", "rb") as fp:
+        result = datacrawler.parse(download_file=fp)
+        print(datacrawler.to_df(data=result))

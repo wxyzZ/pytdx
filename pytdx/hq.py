@@ -135,9 +135,14 @@ class TdxHq_API(BaseSocketClient):
 
     @update_last_ack_time
     def get_company_info_content(self, market, code, filename, start, length):
+        result = ""
         cmd = GetCompanyInfoContent(self.client, lock=self.lock)
-        cmd.setParams(market, code, filename, start, length)
-        return cmd.call_api()
+        while cmd.retry_send:
+            cmd.setParams(market, code, filename, start, length)
+            result+=cmd.call_api()
+            start+=30720
+            length-=30720
+        return result
 
     @update_last_ack_time
     def get_xdxr_info(self, market, code):
@@ -228,49 +233,49 @@ if __name__ == '__main__':
     import pprint
 
     api = TdxHq_API()
-    if api.connect('101.227.73.20', 7709):
-        log.info("获取股票行情")
-        stocks = api.get_security_quotes([(0, "000001"), (1, "600300")])
-        pprint.pprint(stocks)
-        log.info("获取k线")
-        data = api.get_security_bars(9, 0, '000001', 4, 3)
-        pprint.pprint(data)
-        log.info("获取 深市 股票数量")
-        pprint.pprint(api.get_security_count(0))
-        log.info("获取股票列表")
-        stocks = api.get_security_list(1, 255)
-        pprint.pprint(stocks)
-        log.info("获取指数k线")
-        data = api.get_index_bars(9, 1, '000001', 1, 2)
-        pprint.pprint(data)
-        log.info("查询分时行情")
-        data = api.get_minute_time_data(TDXParams.MARKET_SH, '600300')
-        pprint.pprint(data)
-        log.info("查询历史分时行情")
-        data = api.get_history_minute_time_data(
-            TDXParams.MARKET_SH, '600300', 20161209)
-        pprint.pprint(data)
-        log.info("查询分时成交")
-        data = api.get_transaction_data(TDXParams.MARKET_SZ, '000001', 0, 30)
-        pprint.pprint(data)
-        log.info("查询历史分时成交")
-        data = api.get_history_transaction_data(
-            TDXParams.MARKET_SZ, '000001', 0, 10, 20170209)
-        pprint.pprint(data)
-        log.info("查询公司信息目录")
-        data = api.get_company_info_category(TDXParams.MARKET_SZ, '000001')
-        pprint.pprint(data)
+    if api.connect('182.118.47.190', 7709):
+        # log.info("获取股票行情")
+        # stocks = api.get_security_quotes([(0, "000001"), (1, "600300")])
+        # pprint.pprint(stocks)
+        # log.info("获取k线")
+        # data = api.get_security_bars(9, 0, '000001', 4, 3)
+        # pprint.pprint(data)
+        # log.info("获取 深市 股票数量")
+        # pprint.pprint(api.get_security_count(0))
+        # log.info("获取股票列表")
+        # stocks = api.get_security_list(1, 255)
+        # pprint.pprint(stocks)
+        # log.info("获取指数k线")
+        # data = api.get_index_bars(9, 1, '000001', 1, 2)
+        # pprint.pprint(data)
+        # log.info("查询分时行情")
+        # data = api.get_minute_time_data(TDXParams.MARKET_SH, '600300')
+        # pprint.pprint(data)
+        # log.info("查询历史分时行情")
+        # data = api.get_history_minute_time_data(
+        #     TDXParams.MARKET_SH, '600300', 20161209)
+        # pprint.pprint(data)
+        # log.info("查询分时成交")
+        # data = api.get_transaction_data(TDXParams.MARKET_SZ, '000001', 0, 30)
+        # pprint.pprint(data)
+        # log.info("查询历史分时成交")
+        # data = api.get_history_transaction_data(
+        #     TDXParams.MARKET_SZ, '000001', 0, 10, 20170209)
+        # pprint.pprint(data)
+        # log.info("查询公司信息目录")
+        # data = api.get_company_info_category(TDXParams.MARKET_SZ, '000001')
+        # pprint.pprint(data)
         log.info("读取公司信息-最新提示")
-        data = api.get_company_info_content(0, '000001', '000001.txt', 0, 10)
-        pprint.pprint(data)
-        log.info("读取除权除息信息")
-        data = api.get_xdxr_info(1, '600300')
-        pprint.pprint(data)
-        log.info("读取财务信息")
-        data = api.get_finance_info(0, '000001')
-        pprint.pprint(data)
-        log.info("日线级别k线获取函数")
-        data = api.get_k_data('000001', '2017-07-01', '2017-07-10')
-        pprint.pprint(data)
+        data = api.get_company_info_content(0,'000001','000001.txt',8367,43379)
+        print(data)
+        # log.info("读取除权除息信息")
+        # data = api.get_xdxr_info(1, '600300')
+        # pprint.pprint(data)
+        # log.info("读取财务信息")
+        # data = api.get_finance_info(0, '000001')
+        # pprint.pprint(data)
+        # log.info("日线级别k线获取函数")
+        # data = api.get_k_data('000001', '2017-07-01', '2017-07-10')
+        # pprint.pprint(data)
 
         api.disconnect()

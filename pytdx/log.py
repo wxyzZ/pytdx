@@ -3,7 +3,7 @@
 import logging
 import os
 
-DEBUG = os.getenv("TDX_DEBUG", "")
+DEBUG = os.getenv("TDX_DEBUG", '')
 
 if DEBUG:
     LOGLEVEL = logging.DEBUG
