@@ -49,8 +49,8 @@ class BaseCralwer:
         url = self.get_url(*args, **kwargs)
 
         request = Request(url)
-        request.add_header('Referer', url)
-        request.add_header('User-Agent', r"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36")
+        # request.add_header('Referer', url)
+        request.add_header('User-Agent', r"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36")
         res = urlopen(request)
 
         if six.PY2:

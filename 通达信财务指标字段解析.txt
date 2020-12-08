@@ -1,580 +1,580 @@
-﻿001基本每股收益: EPS,
-002扣除非经常性损益每股收益: deductEPS,
-003每股未分配利润: undistributedProfitPerShare,
-004每股净资产: netAssetsPerShare,
-005每股资本公积金: capitalReservePerShare,
-006净资产收益率: ROE,
-007每股经营现金流量: operatingCashFlowPerShare,
-008货币资金: moneyFunds,
-009交易性金融资产: tradingFinancialAssets,
-010应收票据: billsReceivables,
-011应收账款: accountsReceivables,
-012预付款项: prepayments,
-013其他应收款: otherReceivables,
-014应收关联公司款: interCompanyReceivables,
-015应收利息: interestReceivables,
-016应收股利: dividendsReceivables,
-017存货: inventory,
-018其中：消耗性生物资产: expendableBiologicalAssets,
-019一年内到期的非流动资产: noncurrentAssetsDueWithinOneYear,
-020其他流动资产: otherLiquidAssets,
-021流动资产合计: totalLiquidAssets,
-022可供出售金融资产: availableForSaleSecurities,
-023持有至到期投资: heldToMaturityInvestments,
-024长期应收款: longTermReceivables,
-025长期股权投资: longTermEquityInvestment,
-026投资性房地产: investmentRealEstate,
-027固定资产: fixedAssets,
-028在建工程: constructionInProgress,
-029工程物资: engineerMaterial,
-030固定资产清理: fixedAssetsCleanUp,
-031生产性生物资产: productiveBiologicalAssets,
-032油气资产: oilAndGasAssets,
-033无形资产: intangibleAssets,
-034开发支出: developmentExpenditure,
-035商誉: goodwill,
-036长期待摊费用: longTermDeferredExpenses,
-037递延所得税资产: deferredIncomeTaxAssets,
-038其他非流动资产: otherNonCurrentAssets,
-039非流动资产合计: totalNonCurrentAssets,
-040资产总计: totalAssets,
-041短期借款: shortTermLoan,
-042交易性金融负债: tradingFinancialLiabilities,
-043应付票据: billsPayable,
-044应付账款: accountsPayable,
-045预收款项: advancedReceivable,
-046应付职工薪酬: employeesPayable,
-047应交税费: taxPayable,
-048应付利息: interestPayable,
-049应付股利: dividendPayable,
-050其他应付款: otherPayable,
-051应付关联公司款: interCompanyPayable,
-052一年内到期的非流动负债: noncurrentLiabilitiesDueWithinOneYear,
-053其他流动负债: otherCurrentLiabilities,
-054流动负债合计: totalCurrentLiabilities,
-055长期借款: longTermLoans,
-056应付债券: bondsPayable,
-057长期应付款: longTermPayable,
-058专项应付款: specialPayable,
-059预计负债: estimatedLiabilities,
-060递延所得税负债: defferredIncomeTaxLiabilities,
-061其他非流动负债: otherNonCurrentLiabilities,
-062非流动负债合计: totalNonCurrentLiabilities,
-063负债合计: totalLiabilities,
-064实收资本（或股本）: totalShare,
-065资本公积: capitalReserve,
-066盈余公积: surplusReserve,
-067减：库存股: treasuryStock,
-068未分配利润: undistributedProfits,
-069少数股东权益: minorityEquity,
-070外币报表折算价差: foreignCurrencyReportTranslationSpread,
-071非正常经营项目收益调整: abnormalBusinessProjectEarningsAdjustment,
-072所有者权益（或股东权益）合计: totalOwnersEquity,
-073负债和所有者（或股东权益）合计: totalLiabilitiesAndOwnersEquity,
-074其中：营业收入: operatingRevenue,
-075其中：营业成本: operatingCosts,
-076营业税金及附加: taxAndSurcharges,
-077销售费用: salesCosts,
-078管理费用: managementCosts,
-079堪探费用: explorationCosts,
-080财务费用: financialCosts,
-081资产减值损失: assestsDevaluation,
-082加：公允价值变动净收益: profitAndLossFromFairValueChanges,
-083投资收益: investmentIncome,
-084其中：对联营企业和合营企业的投资收益: investmentIncomeFromAffiliatedBusinessAndCooperativeEnterprise,
-085影响营业利润的其他科目: otherSubjectsAffectingOperatingProfit,
-086三、营业利润: operatingProfit,
-087加：补贴收入: subsidyIncome,
-088营业外收入: nonOperatingIncome,
-089减：营业外支出: nonOperatingExpenses,
-090其中：非流动资产处置净损失: netLossFromDisposalOfNonCurrentAssets,
-091加：影响利润总额的其他科目: otherSubjectsAffectTotalProfit,
-092四、利润总额: totalProfit,
-093减：所得税: incomeTax,
-094加：影响净利润的其他科目: otherSubjectsAffectNetProfit,
-095五、净利润: netProfit,
-096归属于母公司所有者的净利润: netProfitsBelongToParentCompanyOwner,
-097少数股东损益: minorityProfitAndLoss,
-098销售商品、提供劳务收到的现金: cashFromGoodsSalesorOrRenderingOfServices,
-099收到的税费返还: refundOfTaxAndFeeReceived,
-100收到其他与经营活动有关的现金: otherCashRelatedBusinessActivitiesReceived,
-101经营活动现金流入小计: cashInflowsFromOperatingActivities,
-102购买商品、接受劳务支付的现金: buyingGoodsReceivingCashPaidForLabor,
-103支付给职工以及为职工支付的现金: paymentToEmployeesAndCashPaidForEmployees,
-104支付的各项税费: paymentsOfVariousTaxes,
-105支付其他与经营活动有关的现金: paymentOfOtherCashRelatedToBusinessActivities,
-106经营活动现金流出小计: cashOutflowsFromOperatingActivities,
-107经营活动产生的现金流量净额: netCashFlowsFromOperatingActivities,
-108收回投资收到的现金: cashReceivedFromInvestmentReceived,
-109取得投资收益收到的现金: cashReceivedFromInvestmentIncome,
-110处置固定资产、无形资产和其他长期资产收回的现金净额: disposalOfNetCashForRecoveryOfFixedAssetsIntangibleAssetsAndOtherLongTermAssets,
-111处置子公司及其他营业单位收到的现金净额: disposalOfNetCashReceivedFromSubsidiariesAndOtherBusinessUnits,
-112收到其他与投资活动有关的现金: otherCashReceivedRelatingToInvestingActivities,
-113投资活动现金流入小计: cashinFlowsFromInvestmentActivities,
-114购建固定资产、无形资产和其他长期资产支付的现金: cashForThePurchaseConstructionPaymentOfFixedAssetsIntangibleAssetsAndOtherLongTermAssets,
-115投资支付的现金: cashInvestment,
-116取得子公司及其他营业单位支付的现金净额: acquisitionOfNetCashPaidBySubsidiariesAndOtherBusinessUnits,
-117支付其他与投资活动有关的现金: otherCashPaidRelatingToInvestingActivities,
-118投资活动现金流出小计: cashOutflowsFromInvestmentActivities,
-119投资活动产生的现金流量净额: netCashFlowsFromInvestingActivities,
-120吸收投资收到的现金: cashReceivedFromInvestors,
-121取得借款收到的现金: cashFromBorrowings,
-122收到其他与筹资活动有关的现金: otherCashReceivedRelatingToFinancingActivities,
-123筹资活动现金流入小计: cashInflowsFromFinancingActivities,
-124偿还债务支付的现金: cashPaymentsOfAmountBorrowed,
-125分配股利、利润或偿付利息支付的现金: cashPaymentsForDistrbutionOfDividendsOrProfits,
-126支付其他与筹资活动有关的现金: otherCashPaymentRelatingToFinancingActivities,
-127筹资活动现金流出小计: cashOutflowsFromFinancingActivities,
-128筹资活动产生的现金流量净额: netCashFlowsFromFinancingActivities,
-129四、汇率变动对现金的影响: effectOfForeignExchangRateChangesOnCash,
-130四(2)、其他原因对现金的影响: effectOfOtherReasonOnCash,
-131五、现金及现金等价物净增加额: netIncreaseInCashAndCashEquivalents,
-132期初现金及现金等价物余额: initialCashAndCashEquivalentsBalance,
-133期末现金及现金等价物余额: theFinalCashAndCashEquivalentsBalance,
-134净利润: netProfitFromOperatingActivities,
-135资产减值准备: provisionForAssetsLosses,
-136固定资产折旧、油气资产折耗、生产性生物资产折旧: depreciationForFixedAssets,
-137无形资产摊销: amortizationOfIntangibleAssets,
-138长期待摊费用摊销: amortizationOfLong-termDeferredExpenses,
-139处置固定资产、无形资产和其他长期资产的损失: lossOfDisposingFixedAssetsIntangibleAssetsAndOtherLong-termAssets,
-140固定资产报废损失: scrapLossOfFixedAssets,
-141公允价值变动损失: lossFromFairValueChange,
-142财务费用: financialExpenses,
-143投资损失: investmentLosses,
-144递延所得税资产减少: decreaseOfDeferredTaxAssets,
-145递延所得税负债增加: increaseOfDeferredTaxLiabilities,
-146存货的减少: decreaseOfInventory,
-147经营性应收项目的减少: decreaseOfOperationReceivables,
-148经营性应付项目的增加: increaseOfOperationPayables,
-149其他: others,
-150经营活动产生的现金流量净额2: netCashFromOperatingActivities2,
-151债务转为资本: debtConvertedToCSapital,
-152一年内到期的可转换公司债券: convertibleBondMaturityWithinOneYear,
-153融资租入固定资产: leaseholdImprovements,
-154现金的期末余额: cashEndingBal,
-155现金的期初余额: cashBeginingBal,
-156现金等价物的期末余额: cashEquivalentsEndingBal,
-157现金等价物的期初余额: cashEquivalentsBeginningBal,
-158现金及现金等价物净增加额: netIncreaseOfCashAndCashEquivalents,
-159流动比率: currentRatio,  # 流动资产/流动负债
-160速动比率: acidTestRatio,  # (流动资产-存货）/流动负债
-161现金比率(%): cashRatio,  # (货币资金+有价证券)÷流动负债
-162利息保障倍数: interestCoverageRatio,  # (利润总额+财务费用（仅指利息费用部份）)/利息费用
-163非流动负债比率(%): noncurrentLiabilitiesRatio,
-164流动负债比率(%): currentLiabilitiesRatio,
-165现金到期债务比率(%): cashDebtRatio,  # 企业经营现金净流入/(本期到期长期负债+本期应付票据)
-166有形资产净值债务率(%): debtToTangibleAssetsRatio,
-167权益乘数(%): equityMultiplier,  # 资产总额/股东权益总额
-168股东的权益/负债合计(%): equityDebtRatio,  # 权益负债率
-169有形资产/负债合计(%): tangibleAssetDebtRatio ,  # 有形资产负债率
-170经营活动产生的现金流量净额/负债合计(%): netCashFlowsFromOperatingActivitiesDebtRatio,
-171EBITDA/负债合计(%): EBITDA/Liabilities,
-172应收帐款周转率: turnoverRatioOfReceivable;,
-173存货周转率: turnoverRatioOfInventory,
-174运营资金周转率: turnoverRatioOfOperatingAssets,
-175总资产周转率: turnoverRatioOfTotalAssets,
-176固定资产周转率: turnoverRatioOfFixedAssets,  # 企业销售收入与固定资产净值的比率
-177应收帐款周转天数: daysSalesOutstanding,  # 企业从取得应收账款的权利到收回款项、转换为现金所需要的时间
-178存货周转天数: daysSalesOfInventory,  # 企业从取得存货开始，至消耗、销售为止所经历的天数
-179流动资产周转率: turnoverRatioOfCurrentAssets,  # 流动资产周转率(次)=主营业务收入/平均流动资产总额
-180流动资产周转天数: daysSalesofCurrentAssets,
-181总资产周转天数: daysSalesofTotalAssets,
-182股东权益周转率: equityTurnover,  # 销售收入/平均股东权益
-183营业收入增长率(%): operatingIncomeGrowth,
-184净利润增长率(%): netProfitGrowthRate,  # NPGR  利润总额－所得税
-185净资产增长率(%): netAssetsGrowthRate,
-186固定资产增长率(%): fixedAssetsGrowthRate,
-187总资产增长率(%): totalAssetsGrowthRate,
-188投资收益增长率(%): investmentIncomeGrowthRate,
-189营业利润增长率(%): operatingProfitGrowthRate,
-190暂无: None1,
-191暂无: None2,
-192暂无: None3,
-193成本费用利润率(%): rateOfReturnOnCost,
-194营业利润率: rateOfReturnOnOperatingProfit,
-195营业税金率: rateOfReturnOnBusinessTax,
-196营业成本率: rateOfReturnOnOperatingCost,
-197净资产收益率: rateOfReturnOnCommonStockholdersEquity,
-198投资收益率: rateOfReturnOnInvestmentIncome,
-199销售净利率(%): rateOfReturnOnNetSalesProfit,
-200总资产报酬率: rateOfReturnOnTotalAssets,
-201净利润率: netProfitMargin,
-202销售毛利率(%): rateOfReturnOnGrossProfitFromSales,
-203三费比重: threeFeeProportion,
-204管理费用率: ratioOfChargingExpense,
-205财务费用率: ratioOfFinancialExpense,
-206扣除非经常性损益后的净利润: netProfitAfterExtraordinaryGainsAndLosses,
-207息税前利润(EBIT): EBIT,
-208息税折旧摊销前利润(EBITDA): EBITDA,
-209EBITDA/营业总收入(%): EBITDA/GrossRevenueRate,
-210资产负债率(%): assetsLiabilitiesRatio,
-211流动资产比率: currentAssetsRatio, 
-212货币资金比率: monetaryFundRatio,
-213存货比率: inventoryRatio,
-214固定资产比率: fixedAssetsRatio,
-215负债结构比: liabilitiesStructureRatio,
-216归属于母公司股东权益/全部投入资本(%): shareholdersOwnershipOfAParentCompany/TotalCapital,
-217股东的权益/带息债务(%): shareholdersInterest/InterestRateDebtRatio,
-218有形资产/净债务(%): tangibleAssets/NetDebtRatio,
-219每股经营性现金流(元): operatingCashFlowPerShare,
-220营业收入现金含量(%): cashOfOperatingIncome,
-221经营活动产生的现金流量净额/经营活动净收益(%): netOperatingCashFlow/netOperationProfit,
-222销售商品提供劳务收到的现金/营业收入(%): cashFromGoodsSales/OperatingRevenue,
-223经营活动产生的现金流量净额/营业收入: netOperatingCashFlow/OperatingRevenue,
-224资本支出/折旧和摊销: capitalExpenditure/DepreciationAndAmortization,
-225每股现金流量净额(元): netCashFlowPerShare,
-226经营净现金比率（短期债务）: operatingCashFlow/ShortTermDebtRatio,
-227经营净现金比率（全部债务）: operatingCashFlow/LongTermDebtRatio,
-228经营活动现金净流量与净利润比率: cashFlowRateAndNetProfitRatioOfOperatingActivities,
-229全部资产现金回收率: cashRecoveryForAllAssets,
-230营业收入: operatingRevenueSingle,
-231营业利润: operatingProfitSingle,
-232归属于母公司所有者的净利润: netProfitBelongingToTheOwnerOfTheParentCompanySingle,
-233扣除非经常性损益后的净利润: netProfitAfterExtraordinaryGainsAndLossesSingle,
-234经营活动产生的现金流量净额: netCashFlowsFromOperatingActivitiesSingle,
-235投资活动产生的现金流量净额: netCashFlowsFromInvestingActivitiesSingle,
-236筹资活动产生的现金流量净额: netCashFlowsFromFinancingActivitiesSingle,
-237现金及现金等价物净增加额: netIncreaseInCashAndCashEquivalentsSingle,
-238总股本: totalCapital,
-239已上市流通A股: listedAShares,
-240已上市流通B股: listedBShares,
-241已上市流通H股: listedHShares,
-242股东人数(户): numberOfShareholders,
-243第一大股东的持股数量: theNumberOfFirstMajorityShareholder,
-244十大流通股东持股数量合计(股): totalNumberOfTopTenCirculationShareholders,
-245十大股东持股数量合计(股): totalNumberOfTopTenMajorShareholders,
-246机构总量（家）: institutionNumber,
-247机构持股总量(股): institutionShareholding,
-248QFII机构数: QFIIInstitutionNumber,
-249QFII持股量: QFIIShareholding,
-250券商机构数: brokerNumber,
-251券商持股量: brokerShareholding,
-252保险机构数: securityNumber,
-253保险持股量: securityShareholding,
-254基金机构数: fundsNumber,
-255基金持股量: fundsShareholding,
-256社保机构数: socialSecurityNumber,
-257社保持股量: socialSecurityShareholding,
-258私募机构数: privateEquityNumber,
-259私募持股量: privateEquityShareholding,
-260财务公司机构数: financialCompanyNumber,
-261财务公司持股量: financialCompanyShareholding,
-262年金机构数: pensionInsuranceAgencyNumber,
-263年金持股量: pensionInsuranceAgencyShareholfing,
-264十大流通股东中持有A股合计(股): totalNumberOfTopTenCirculationShareholders,
-265第一大流通股东持股量(股): firstLargeCirculationShareholdersNumber,
-266自由流通股(股): freeCirculationStock,
-267受限流通A股(股): limitedCirculationAShares,
-268一般风险准备(金融类): generalRiskPreparation,
-269其他综合收益(利润表): otherComprehensiveIncome,
-270综合收益总额(利润表): totalComprehensiveIncome,
-271归属于母公司股东权益(资产负债表): shareholdersOwnershipOfAParentCompany ,
-272银行机构数(家)(机构持股): bankInstutionNumber,
-273银行持股量(股)(机构持股): bankInstutionShareholding,
-274一般法人机构数(家)(机构持股): corporationNumber,
-275一般法人持股量(股)(机构持股): corporationShareholding,
-276近一年净利润(元): netProfitLastYear,
-277信托机构数(家)(机构持股): trustInstitutionNumber,
-278信托持股量(股)(机构持股): trustInstitutionShareholding,
-279特殊法人机构数(家)(机构持股): specialCorporationNumber,
-280特殊法人持股量(股)(机构持股): specialCorporationShareholding,
-281加权净资产收益率(每股指标): weightedROE,
-282扣非每股收益(单季度财务指标): nonEPSSingle,
-283最近一年营业收入(万元): lastYearOperatingIncome,
-284国家队持股数量(万股): nationalTeamShareholding,
-285业绩预告-本期净利润同比增幅下限%: PF_theLowerLimitoftheYearonyearGrowthofNetProfitForThePeriod,
-286业绩预告-本期净利润同比增幅上限%: PF_theHigherLimitoftheYearonyearGrowthofNetProfitForThePeriod,
-287业绩快报-归母净利润: PE_returningtotheMothersNetProfit,
-288业绩快报-扣非净利润: PE_Non-netProfit,
-289业绩快报-总资产: PE_TotalAssets,
-290业绩快报-净资产: PE_NetAssets,
-291业绩快报-每股收益: PE_EPS,
-292业绩快报-摊薄净资产收益率: PE_DilutedROA,
-293业绩快报-加权净资产收益率: PE_WeightedROE,
-294业绩快报-每股净资产: PE_NetAssetsperShare,
-295应付票据及应付账款(资产负债表): BS_NotesPayableandAccountsPayable,
-296应收票据及应收账款(资产负债表): BS_NotesReceivableandAccountsReceivable,
-297递延收益(资产负债表): BS_DeferredIncome,
-298其他综合收益(资产负债表): BS_OtherComprehensiveIncome,
-299其他权益工具(资产负债表): BS_OtherEquityInstruments,
-300其他收益(利润表): IS_OtherIncome,
-301资产处置收益(利润表): IS_AssetDisposalIncome,
-302持续经营净利润(利润表): IS_NetProfitforContinuingOperations,
-303终止经营净利润(利润表): IS_NetProfitforTerminationOperations,
-304研发费用(利润表): IS_R&DExpense,
-305其中:利息费用(利润表-财务费用): IS_InterestExpense,
-306其中:利息收入(利润表-财务费用): IS_InterestIncome,
-307近一年经营活动现金流净额: netCashFlowfromOperatingActivitiesinthepastyear,
-308净利润(万元):unknown308,
-309扣除非经常性损益后的利润(元):unknown309,
-310现金及现金等价物净增加额(元):unknown310,
-311未知311:unknown311,
-312未知312:注册资本,
-313未知313:unknown313,
-314未知314:公告日期,
-315未知315:unknown315,
-316投资活动产生的现金流量净额:unknown316,
-317未知317:unknown317,
-318未知318:unknown318,
-319营业收入 :unknown319,
-320在职员工:unknown320,
-321未知321:unknown321,
-322未知322:unknown322,
-323营业利润:unknown323,
-324未知324:unknown324,
-325未知325:unknown325,
-326未知326:unknown326,
-327未知327:unknown327,
-328未知328:unknown328,
-329未知329:unknown329,
-330未知330:unknown330,
-331未知331:unknown331,
-332未知332:unknown332,
-333未知333:unknown333,
-334未知334:unknown334,
-335未知335:unknown335,
-336未知336:unknown336,
-337未知337:unknown337,
-338未知338:unknown338,
-339未知339:unknown339,
-340未知340:unknown340,
-341未知341:unknown341,
-342未知342:unknown342,
-343未知343:unknown343,
-344未知344:unknown344,
-345未知345:unknown345,
-346未知346:unknown346,
-347未知347:unknown347,
-348未知348:unknown348,
-349未知349:unknown349,
-350未知350:unknown350,
-351未知351:unknown351,
-352未知352:unknown352,
-353未知353:unknown353,
-354未知354:unknown354,
-355未知355:unknown355,
-356未知356:unknown356,
-357未知357:unknown357,
-358未知358:unknown358,
-359未知359:unknown359,
-360未知360:unknown360,
-361未知361:unknown361,
-362未知362:unknown362,
-363未知363:unknown363,
-364未知364:unknown364,
-365未知365:unknown365,
-366未知366:unknown366,
-367未知367:unknown367,
-368未知368:unknown368,
-369未知369:unknown369,
-370未知370:unknown370,
-371未知371:unknown371,
-372未知372:unknown372,
-373未知373:unknown373,
-374未知374:unknown374,
-375未知375:unknown375,
-376未知376:unknown376,
-377未知377:unknown377,
-378未知378:unknown378,
-379未知379:unknown379,
-380未知380:unknown380,
-381未知381:unknown381,
-382未知382:unknown382,
-383未知383:unknown383,
-384未知384:unknown384,
-385未知385:unknown385,
-386未知386:unknown386,
-387未知387:unknown387,
-388未知388:unknown388,
-389未知389:unknown389,
-390未知390:unknown390,
-391未知391:unknown391,
-392未知392:unknown392,
-393未知393:unknown393,
-394未知394:unknown394,
-395未知395:unknown395,
-396未知396:unknown396,
-397未知397:unknown397,
-398未知398:unknown398,
-399未知399:unknown399,
-400未知400:unknown400,
-401未知401:unknown401,
-402未知402:unknown402,
-403拆出资金:unknown403,
-404未知404:unknown404,
-405衍生金融资产:,
-406未知406:unknown406,
-407未知407:unknown407,
-408未知408:unknown408,
-409买入返售金融资产:,
-410未知410:unknown410,
-411未知411:unknown411,
-412向中央银行借款:,
-413未知413:unknown413,
-414拆入资金:,
-415衍生金融负债:,
-416卖出回购金融资产款项:,
-417未知417:unknown417,
-418未知418:unknown418,
-419未知419:unknown419,
-420未知420:unknown420,
-421未知421:unknown421,
-422未知422:unknown422,
-423未知423:unknown423,
-424未知424:unknown424,
-425未知425:unknown425,
-426未知426:unknown426,
-427未知427:unknown427,
-428优先股:,
-429永续债:,
-430债权投资:,
-431其他债权投资:,
-432其他权益工具投资:,
-433未知433:unknown433,
-434未知434:unknown434,
-435未知435:unknown435,
-436其他资产:,
-437未知437:unknown437,
-438未知438:unknown438,
-439未知439:unknown439,
-440未知440:unknown440,
-441未知441:unknown441,
-442未知442:unknown442,
-443未知443:unknown443,
-444未知444:unknown444,
-445未知445:unknown445,
-446未知446:unknown446,
-447未知447:unknown447,
-448未知448:unknown448,
-449未知449:unknown449,
-450未知450:unknown450,
-451未知451:unknown451,
-452未知452:unknown452,
-453未知453:unknown453,
-454未知454:unknown454,
-455未知455:unknown455,
-456未知456:unknown456,
-457未知457:unknown457,
-458未知458:unknown458,
-459未知459:unknown459,
-460未知460:unknown460,
-461未知461:unknown461,
-462未知462:unknown462,
-463未知463:unknown463,
-464未知464:unknown464,
-465未知465:unknown465,
-466未知466:unknown466,
-467未知467:unknown467,
-468未知468:unknown468,
-469未知469:unknown469,
-470未知470:unknown470,
-471未知471:unknown471,
-472未知472:unknown472,
-473未知473:unknown473,
-474未知474:unknown474,
-475未知475:unknown475,
-476未知476:unknown476,
-477未知477:unknown477,
-478未知478:unknown478,
-479未知479:unknown479,
-480未知480:unknown480,
-481未知481:unknown481,
-482未知482:unknown482,
-483未知483:unknown483,
-484未知484:unknown484,
-485未知485:unknown485,
-486未知486:unknown486,
-487未知487:unknown487,
-488未知488:unknown488,
-489未知489:unknown489,
-490未知490:unknown490,
-491未知491:unknown491,
-492未知492:unknown492,
-493未知493:unknown493,
-494未知494:unknown494,
-495未知495:unknown495,
-496未知496:unknown496,
-497未知497:unknown497,
-498未知498:unknown498,
-499未知499:unknown499,
-500未知500:unknown500,
-501稀释每股收益:,
-502营业收入:,
-503汇兑损益:,
-504综合收益总额: ,
-505未知505:unknown505,
-506利息净收入:,
-507未知507:unknown507,
-508手续费及佣金净收入:,
-509未知509:unknown509,
-510未知510:unknown510,
-511未知511:unknown511,
-512未知512:unknown512,
-513未知513:unknown513,
-514未知514:unknown514,
-515未知515:unknown515,
-516未知516:unknown516,
-517信用减值损失:,
-518未知518:unknown518,
-519未知519:unknown519,
-520未知520:unknown520,
-521未知521:unknown521,
-522未知522:unknown522,
-523未知523:unknown523,
-524未知524:unknown524,
-525未知525:unknown525,
-526未知526:unknown526,
-527未知527:unknown527,
-528未知528:unknown528,
-529未知529:unknown529,
-530未知530:unknown530,
-531未知531:unknown531,
-532未知532:unknown532,
-533未知533:unknown533,
-534未知534:unknown534,
-535未知535:unknown535,
-536未知536:unknown536,
-537未知537:unknown537,
-538未知538:unknown538,
-539未知539:unknown539,
-540未知540:unknown540,
-541未知541:unknown541,
-542未知542:unknown542,
-543未知543:unknown543,
-544未知544:unknown544,
-545未知545:unknown545,
-546未知546:unknown546,
-547未知547:unknown547,
-548未知548:unknown548,
-549未知549:unknown549,
-550未知550:unknown550,
-551未知551:unknown551,
-552未知552:unknown552,
-553未知553:unknown553,
-554未知554:unknown554,
-555未知555:unknown555,
-556未知556:unknown556,
-557未知557:unknown557,
-558未知558:unknown558,
-559未知559:unknown559,
-560未知560:unknown560,
-561未知561:unknown561,
-562吸收存款和同业存放款项净增加额:,
-563未知563:unknown563,
-564未知564:unknown564,
-565未知565:unknown565,
-566未知566:unknown566,
-567未知567:unknown567,
-568未知568:unknown568,
-569收取利息、手续费及佣金的现金:,
-570拆入资金净增加额:,
-571卖出回购金融资产款净增加额:,
-572发放贷款和垫款净增加额:,
-573未知573:unknown573,
-574未知574:unknown574,
-575支付利息、手续费及佣金的现金:,
-576未知576:unknown576,
-577未知577:unknown577,
-578未知578:unknown578,
-579递延所得税负债:,
-580未知580:unknown580,
+﻿001,基本每股收益
+002,扣除非经常性损益每股收益
+003,每股未分配利润
+004,每股净资产
+005,每股资本公积金
+006,净资产收益率
+007,每股经营现金流量
+008,货币资金
+009,交易性金融资产
+010,应收票据
+011,应收账款
+012,预付款项
+013,其他应收款
+014,应收关联公司款
+015,应收利息
+016,应收股利
+017,存货
+018,其中：消耗性生物资产
+019,一年内到期的非流动资产
+020,其他流动资产
+021,流动资产合计
+022,可供出售金融资产
+023,持有至到期投资
+024,长期应收款
+025,长期股权投资
+026,投资性房地产
+027,固定资产
+028,在建工程
+029,工程物资
+030,固定资产清理
+031,生产性生物资产
+032,油气资产
+033,无形资产
+034,开发支出
+035,商誉
+036,长期待摊费用
+037,递延所得税资产
+038,其他非流动资产
+039,非流动资产合计
+040,资产总计
+041,短期借款
+042,交易性金融负债
+043,应付票据
+044,应付账款
+045,预收款项
+046,应付职工薪酬
+047,应交税费
+048,应付利息
+049,应付股利
+050,其他应付款
+051,应付关联公司款
+052,一年内到期的非流动负债
+053,其他流动负债
+054,流动负债合计
+055,长期借款
+056,应付债券
+057,长期应付款
+058,专项应付款
+059,预计负债
+060,递延所得税负债
+061,其他非流动负债
+062,非流动负债合计
+063,负债合计
+064,实收资本（或股本）
+065,资本公积
+066,盈余公积
+067,减：库存股
+068,未分配利润
+069,少数股东权益
+070,外币报表折算价差
+071,非正常经营项目收益调整
+072,所有者权益（或股东权益）合计
+073,负债和所有者（或股东权益）合计
+074,其中：营业收入
+075,其中：营业成本
+076,营业税金及附加
+077,销售费用
+078,管理费用
+079,堪探费用
+080,财务费用
+081,资产减值损失
+082,加：公允价值变动净收益
+083,投资收益
+084,其中：对联营企业和合营企业的投资收益
+085,影响营业利润的其他科目
+086,三、营业利润
+087,加：补贴收入
+088,营业外收入
+089,减：营业外支出
+090,其中：非流动资产处置净损失
+091,加：影响利润总额的其他科目
+092,四、利润总额
+093,减：所得税
+094,加：影响净利润的其他科目
+095,五、净利润
+096,归属于母公司所有者的净利润
+097,少数股东损益
+098,销售商品、提供劳务收到的现金
+099,收到的税费返还
+100,收到其他与经营活动有关的现金
+101,经营活动现金流入小计
+102,购买商品、接受劳务支付的现金
+103,支付给职工以及为职工支付的现金
+104,支付的各项税费
+105,支付其他与经营活动有关的现金
+106,经营活动现金流出小计
+107,经营活动产生的现金流量净额
+108,收回投资收到的现金
+109,取得投资收益收到的现金
+110,处置固定资产、无形资产和其他长期资产收回的现金净额
+111,处置子公司及其他营业单位收到的现金净额
+112,收到其他与投资活动有关的现金
+113,投资活动现金流入小计
+114,购建固定资产、无形资产和其他长期资产支付的现金
+115,投资支付的现金
+116,取得子公司及其他营业单位支付的现金净额
+117,支付其他与投资活动有关的现金
+118,投资活动现金流出小计
+119,投资活动产生的现金流量净额
+120,吸收投资收到的现金
+121,取得借款收到的现金
+122,收到其他与筹资活动有关的现金
+123,筹资活动现金流入小计
+124,偿还债务支付的现金
+125,分配股利、利润或偿付利息支付的现金
+126,支付其他与筹资活动有关的现金
+127,筹资活动现金流出小计
+128,筹资活动产生的现金流量净额
+129,四、汇率变动对现金的影响
+130,四(2)、其他原因对现金的影响
+131,五、现金及现金等价物净增加额
+132,期初现金及现金等价物余额
+133,期末现金及现金等价物余额
+134,净利润
+135,资产减值准备
+136,固定资产折旧、油气资产折耗、生产性生物资产折旧
+137,无形资产摊销
+138,长期待摊费用摊销
+139,处置固定资产、无形资产和其他长期资产的损失
+140,固定资产报废损失
+141,公允价值变动损失
+142,财务费用
+143,投资损失
+144,递延所得税资产减少
+145,递延所得税负债增加
+146,存货的减少
+147,经营性应收项目的减少
+148,经营性应付项目的增加
+149,其他
+150,经营活动产生的现金流量净额2
+151,债务转为资本
+152,一年内到期的可转换公司债券
+153,融资租入固定资产
+154,现金的期末余额
+155,现金的期初余额
+156,现金等价物的期末余额
+157,现金等价物的期初余额
+158,现金及现金等价物净增加额
+159,流动比率
+160,速动比率
+161,现金比率(%)
+162,利息保障倍数
+163,非流动负债比率(%)
+164,流动负债比率(%)
+165,现金到期债务比率(%)
+166,有形资产净值债务率(%)
+167,权益乘数(%)
+168,股东的权益/负债合计(%)
+169,有形资产/负债合计(%)
+170,经营活动产生的现金流量净额/负债合计(%)
+171,EBITDA/负债合计(%)
+172,应收帐款周转率
+173,存货周转率
+174,运营资金周转率
+175,总资产周转率
+176,固定资产周转率
+177,应收帐款周转天数
+178,存货周转天数
+179,流动资产周转率
+180,流动资产周转天数
+181,总资产周转天数
+182,股东权益周转率
+183,营业收入增长率(%)
+184,净利润增长率(%)
+185,净资产增长率(%)
+186,固定资产增长率(%)
+187,总资产增长率(%)
+188,投资收益增长率(%)
+189,营业利润增长率(%)
+190,暂无
+191,暂无
+192,暂无
+193,成本费用利润率(%)
+194,营业利润率
+195,营业税金率
+196,营业成本率
+197,净资产收益率
+198,投资收益率
+199,销售净利率(%)
+200,总资产报酬率
+201,净利润率
+202,销售毛利率(%)
+203,三费比重
+204,管理费用率
+205,财务费用率
+206,扣除非经常性损益后的净利润
+207,息税前利润(EBIT)
+208,息税折旧摊销前利润(EBITDA)
+209,EBITDA/营业总收入(%)
+210,资产负债率(%)
+211,流动资产比率
+212,货币资金比率
+213,存货比率
+214,固定资产比率
+215,负债结构比
+216,归属于母公司股东权益/全部投入资本(%)
+217,股东的权益/带息债务(%)
+218,有形资产/净债务(%)
+219,每股经营性现金流(元)
+220,营业收入现金含量(%)
+221,经营活动产生的现金流量净额/经营活动净收益(%)
+222,销售商品提供劳务收到的现金/营业收入(%)
+223,经营活动产生的现金流量净额/营业收入
+224,资本支出/折旧和摊销
+225,每股现金流量净额(元)
+226,经营净现金比率（短期债务）
+227,经营净现金比率（全部债务）
+228,经营活动现金净流量与净利润比率
+229,全部资产现金回收率
+230,营业收入
+231,营业利润
+232,归属于母公司所有者的净利润
+233,扣除非经常性损益后的净利润
+234,经营活动产生的现金流量净额
+235,投资活动产生的现金流量净额
+236,筹资活动产生的现金流量净额
+237,现金及现金等价物净增加额
+238,总股本
+239,已上市流通A股
+240,已上市流通B股
+241,已上市流通H股
+242,股东人数(户)
+243,第一大股东的持股数量
+244,十大流通股东持股数量合计(股)
+245,十大股东持股数量合计(股)
+246,机构总量（家）
+247,机构持股总量(股)
+248,QFII机构数
+249,QFII持股量
+250,券商机构数
+251,券商持股量
+252,保险机构数
+253,保险持股量
+254,基金机构数
+255,基金持股量
+256,社保机构数
+257,社保持股量
+258,私募机构数
+259,私募持股量
+260,财务公司机构数
+261,财务公司持股量
+262,年金机构数
+263,年金持股量
+264,十大流通股东中持有A股合计(股)
+265,第一大流通股东持股量(股)
+266,自由流通股(股)
+267,受限流通A股(股)
+268,一般风险准备(金融类)
+269,其他综合收益(利润表)
+270,综合收益总额(利润表)
+271,归属于母公司股东权益(资产负债表)
+272,银行机构数(家)(机构持股)
+273,银行持股量(股)(机构持股)
+274,一般法人机构数(家)(机构持股)
+275,一般法人持股量(股)(机构持股)
+276,近一年净利润(元)
+277,信托机构数(家)(机构持股)
+278,信托持股量(股)(机构持股)
+279,特殊法人机构数(家)(机构持股)
+280,特殊法人持股量(股)(机构持股)
+281,加权净资产收益率(每股指标)
+282,扣非每股收益(单季度财务指标)
+283,最近一年营业收入(万元)
+284,国家队持股数量(万股)
+285,业绩预告-本期净利润同比增幅下限%
+286,业绩预告-本期净利润同比增幅上限%
+287,业绩快报-归母净利润
+288,业绩快报-扣非净利润
+289,业绩快报-总资产
+290,业绩快报-净资产
+291,业绩快报-每股收益
+292,业绩快报-摊薄净资产收益率
+293,业绩快报-加权净资产收益率
+294,业绩快报-每股净资产
+295,应付票据及应付账款(资产负债表)
+296,应收票据及应收账款(资产负债表)
+297,递延收益(资产负债表)
+298,其他综合收益(资产负债表)
+299,其他权益工具(资产负债表)
+300,其他收益(利润表)
+301,资产处置收益(利润表)
+302,持续经营净利润(利润表)
+303,终止经营净利润(利润表)
+304,研发费用(利润表)
+305,其中:利息费用(利润表-财务费用)
+306,其中:利息收入(利润表-财务费用)
+307,近一年经营活动现金流净额
+308,净利润(万元)
+309,扣除非经常性损益后的利润(元)
+310,现金及现金等价物净增加额(元)
+311,未知311
+312,未知312
+313,未知313
+314,未知314
+315,未知315
+316,投资活动产生的现金流量净额
+317,未知317
+318,未知318
+319,营业收入 
+320,在职员工
+321,未知321
+322,未知322
+323,营业利润
+324,未知324
+325,未知325
+326,未知326
+327,未知327
+328,未知328
+329,未知329
+330,未知330
+331,未知331
+332,未知332
+333,未知333
+334,未知334
+335,未知335
+336,未知336
+337,未知337
+338,未知338
+339,未知339
+340,未知340
+341,未知341
+342,未知342
+343,未知343
+344,未知344
+345,未知345
+346,未知346
+347,未知347
+348,未知348
+349,未知349
+350,未知350
+351,未知351
+352,未知352
+353,未知353
+354,未知354
+355,未知355
+356,未知356
+357,未知357
+358,未知358
+359,未知359
+360,未知360
+361,未知361
+362,未知362
+363,未知363
+364,未知364
+365,未知365
+366,未知366
+367,未知367
+368,未知368
+369,未知369
+370,未知370
+371,未知371
+372,未知372
+373,未知373
+374,未知374
+375,未知375
+376,未知376
+377,未知377
+378,未知378
+379,未知379
+380,未知380
+381,未知381
+382,未知382
+383,未知383
+384,未知384
+385,未知385
+386,未知386
+387,未知387
+388,未知388
+389,未知389
+390,未知390
+391,未知391
+392,未知392
+393,未知393
+394,未知394
+395,未知395
+396,未知396
+397,未知397
+398,未知398
+399,未知399
+400,未知400
+401,未知401
+402,未知402
+403,拆出资金
+404,未知404
+405,衍生金融资产
+406,未知406
+407,未知407
+408,未知408
+409,买入返售金融资产
+410,未知410
+411,未知411
+412,向中央银行借款
+413,未知413
+414,拆入资金
+415,衍生金融负债
+416,卖出回购金融资产款项
+417,未知417
+418,未知418
+419,未知419
+420,未知420
+421,未知421
+422,未知422
+423,未知423
+424,未知424
+425,未知425
+426,未知426
+427,未知427
+428,优先股
+429,永续债
+430,债权投资
+431,其他债权投资
+432,其他权益工具投资
+433,未知433
+434,未知434
+435,未知435
+436,其他资产
+437,未知437
+438,未知438
+439,未知439
+440,未知440
+441,未知441
+442,未知442
+443,未知443
+444,未知444
+445,未知445
+446,未知446
+447,未知447
+448,未知448
+449,未知449
+450,未知450
+451,未知451
+452,未知452
+453,未知453
+454,未知454
+455,未知455
+456,未知456
+457,未知457
+458,未知458
+459,未知459
+460,未知460
+461,未知461
+462,未知462
+463,未知463
+464,未知464
+465,未知465
+466,未知466
+467,未知467
+468,未知468
+469,未知469
+470,未知470
+471,未知471
+472,未知472
+473,未知473
+474,未知474
+475,未知475
+476,未知476
+477,未知477
+478,未知478
+479,未知479
+480,未知480
+481,未知481
+482,未知482
+483,未知483
+484,未知484
+485,未知485
+486,未知486
+487,未知487
+488,未知488
+489,未知489
+490,未知490
+491,未知491
+492,未知492
+493,未知493
+494,未知494
+495,未知495
+496,未知496
+497,未知497
+498,未知498
+499,未知499
+500,未知500
+501,稀释每股收益
+502,营业收入
+503,汇兑损益
+504,综合收益总额
+505,未知505
+506,利息净收入
+507,未知507
+508,手续费及佣金净收入
+509,未知509
+510,未知510
+511,未知511
+512,未知512
+513,未知513
+514,未知514
+515,未知515
+516,未知516
+517,信用减值损失
+518,未知518
+519,未知519
+520,未知520
+521,未知521
+522,未知522
+523,未知523
+524,未知524
+525,未知525
+526,未知526
+527,未知527
+528,未知528
+529,未知529
+530,未知530
+531,未知531
+532,未知532
+533,未知533
+534,未知534
+535,未知535
+536,未知536
+537,未知537
+538,未知538
+539,未知539
+540,未知540
+541,未知541
+542,未知542
+543,未知543
+544,未知544
+545,未知545
+546,未知546
+547,未知547
+548,未知548
+549,未知549
+550,未知550
+551,未知551
+552,未知552
+553,未知553
+554,未知554
+555,未知555
+556,未知556
+557,未知557
+558,未知558
+559,未知559
+560,未知560
+561,未知561
+562,吸收存款和同业存放款项净增加额
+563,未知563
+564,未知564
+565,未知565
+566,未知566
+567,未知567
+568,未知568
+569,收取利息、手续费及佣金的现金
+570,拆入资金净增加额
+571,卖出回购金融资产款净增加额
+572,发放贷款和垫款净增加额
+573,未知573
+574,未知574
+575,支付利息、手续费及佣金的现金
+576,未知576
+577,未知577
+578,未知578
+579,递延所得税负债
+580,未知580

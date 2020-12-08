@@ -170,6 +170,6 @@ ENV/
 /test.py
 /debug
 /research
-
+tests/tmp
 *.c
 .pytest_cache/

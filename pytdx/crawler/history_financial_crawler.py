@@ -59,7 +59,7 @@ class HistoryFinancialListCrawler(BaseCralwer):
 class HistoryFinancialCrawler(BaseCralwer):
 
     def __init__(self):
-        self.mode = "content"
+        self.mode = "http"
 
     def get_url(self, *args, **kwargs):
         if 'filename' in kwargs:
@@ -67,7 +67,7 @@ class HistoryFinancialCrawler(BaseCralwer):
         else:
             raise Exception("Param filename is not set")
 
-        return "http://data.yutiansut.com/{}".format(filename)
+        return "http://data.tdx.com.cn/tdxfin/{}".format(filename)
 
     
     def get_content(self, reporthook=None, path_to_download=None, proxies=None, chunksize=1024 * 50, *args, **kwargs):
@@ -85,7 +85,7 @@ class HistoryFinancialCrawler(BaseCralwer):
         api = TdxHq_API()
         api.need_setup = False
         # calc.tdx.com.cn, calc2.tdx.com.cn
-        with api.connect(ip="202.108.253.130"):
+        with api.connect(ip="data.tdx.com.cn"):
             content = api.get_report_file_by_size("tdxfin/" + filename, filesize=filesize, reporthook=reporthook)
             if path_to_download is None:
                 download_file = tempfile.NamedTemporaryFile(delete=True)
@@ -163,7 +163,7 @@ class HistoryFinancialCrawler(BaseCralwer):
 
 
         df =  pd.DataFrame(data=data, columns=col)
-        df.to_csv("./a.csv",index=False)
+        # df.to_csv("./a.csv",index=False)
         df.set_index('code', inplace=True)
         return df
 
