@@ -233,7 +233,7 @@ if __name__ == '__main__':
     import pprint
 
     api = TdxHq_API()
-    if api.connect('182.118.47.190', 7709):
+    if api.connect('dbtdx.csc108.com', 7709):
         # log.info("获取股票行情")
         # stocks = api.get_security_quotes([(0, "000001"), (1, "600300")])
         # pprint.pprint(stocks)
@@ -262,12 +262,12 @@ if __name__ == '__main__':
         # data = api.get_history_transaction_data(
         #     TDXParams.MARKET_SZ, '000001', 0, 10, 20170209)
         # pprint.pprint(data)
-        # log.info("查询公司信息目录")
-        # data = api.get_company_info_category(TDXParams.MARKET_SZ, '000001')
-        # pprint.pprint(data)
-        log.info("读取公司信息-最新提示")
-        data = api.get_company_info_content(0,'000001','000001.txt',8367,43379)
-        print(data)
+        log.info("查询公司信息目录")
+        data = api.get_company_info_category(TDXParams.MARKET_SZ, '000001')
+        pprint.pprint(data)
+        # log.info("读取公司信息-最新提示")
+        # data = api.get_company_info_content(0,'000001','000001.txt',8367,43379)
+        # print(data)
         # log.info("读取除权除息信息")
         # data = api.get_xdxr_info(1, '600300')
         # pprint.pprint(data)
