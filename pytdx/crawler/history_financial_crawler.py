@@ -37,7 +37,7 @@ class HistoryFinancialListCrawler(BaseCralwer):
             if path_to_download is None:
                 download_file = tempfile.NamedTemporaryFile(delete=True)
             else:
-                download_file = open(path_to_download, 'wb')
+                download_file = open(path_to_download, 'wb+')
             download_file.write(content)    
             download_file.seek(0)
             return download_file

@@ -29,7 +29,11 @@ def get_all(cwd):
 
 def fetch(downdir='.', filename=None, filelist=False, **kwargs):
     crawler = HistoryFinancialListCrawler()
+    # list_data = crawler.fetch_and_parse(path_to_download=downdir+'/ncontent.txt')
     list_data = crawler.fetch_and_parse()
+    # download_file = open(downdir+'/content.txt', 'rb+')
+    # olist_data = crawler.parse(download_file)
+    # list_data = set(nlist_data).difference(set(olist_data))
     if filelist:
         return list_data
     datacrawler = HistoryFinancialCrawler()
@@ -44,8 +48,8 @@ def fetch(downdir='.', filename=None, filelist=False, **kwargs):
     return list_data
 
 if __name__ == '__main__':
-    engine = create_engine('mysql+pymysql://root:root@localhost/test?charset=utf8')
-    fetch('tmp')
+    engine = create_engine('mysql+pymysql://root:root@localhost/tdx?charset=utf8')
+    # fetch('tmp')
     result = get_all('tmp')
     for i in result:
         name = re.findall(r'\d+',i)[0]
@@ -53,4 +57,4 @@ if __name__ == '__main__':
         if file is None:
             print(i)
             continue
-        file.to_sql(name, engine, if_exists='replace', index=True, dtype={'code': sqlalchemy.types.VARCHAR(10),'report_date':sqlalchemy.types.Integer()})
+        file.to_sql(name, engine, if_exists='replace', index=True, dtype={'code': sqlalchemy.types.VARCHAR(10),'report_date':sqlalchemy.types.Date()})
