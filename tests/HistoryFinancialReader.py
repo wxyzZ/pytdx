@@ -6,8 +6,10 @@ from pytdx.crawler.history_financial_crawler import (HistoryFinancialCrawler,
 from pytdx.reader import HistoryFinancialReader
 from sqlalchemy import create_engine
 import sqlalchemy
+from sqlalchemy import text
 import os
 import re
+import shutil
 
 # 解析历史财务数据
 
@@ -24,16 +26,21 @@ def get_all(cwd):
         if os.path.isdir(sub_dir):
             get_all(sub_dir)
         else:
-            result.append(i)
+            if i.startswith('gpcw'):
+                result.append(i)
     return result
 
 def fetch(downdir='.', filename=None, filelist=False, **kwargs):
     crawler = HistoryFinancialListCrawler()
-    # list_data = crawler.fetch_and_parse(path_to_download=downdir+'/ncontent.txt')
-    list_data = crawler.fetch_and_parse()
-    # download_file = open(downdir+'/content.txt', 'rb+')
-    # olist_data = crawler.parse(download_file)
-    # list_data = set(nlist_data).difference(set(olist_data))
+    content=downdir+'/content.txt'
+    # list_data = crawler.fetch_and_parse()
+    olist_data=[]
+    if os.path.isfile(content):
+        download_file = open(content, 'rb')
+        olist_data = crawler.parse(download_file)
+        download_file.close()
+    nlist_data = crawler.fetch_and_parse(path_to_download=content)
+    list_data = diff(nlist_data,olist_data)
     if filelist:
         return list_data
     datacrawler = HistoryFinancialCrawler()
@@ -47,14 +54,48 @@ def fetch(downdir='.', filename=None, filelist=False, **kwargs):
                                              path_to_download=downfile)
     return list_data
 
+def diff(nlist,olist):
+    if len(nlist)==0:
+        return olist
+    if len(olist)==0:
+        return nlist
+
+    sa = set(tuple(aa.items()) for aa in nlist)
+    sb = set(tuple(bb.items()) for bb in olist)
+    sc =sa-sb
+
+    def list_to_dict(l):
+        return {
+            'filename': l[0][1],
+            'hash': l[1][1],
+            'filesize': int(l[2][1])
+        }
+
+    result = [list_to_dict(l) for l in sc]
+    return result
+
+
+
+
+def insert(file,engine,name):
+    create_sql = open('./create.txt','rb')
+    sql = create_sql.read()
+    sql = sql.decode("utf-8")
+    engine.execute(text('drop table if exists `:tablename` '), {'tablename': int(name)})
+    engine.execute(text(sql), {'tablename': int(name)})
+    file.to_sql(name, engine, if_exists='append', index=True)
+
+
 if __name__ == '__main__':
-    engine = create_engine('mysql+pymysql://root:root@localhost/tdx?charset=utf8')
-    # fetch('tmp')
-    result = get_all('tmp')
-    for i in result:
-        name = re.findall(r'\d+',i)[0]
-        file = parse(downdir='tmp', filename=i)
+    engine = create_engine('mysql+pymysql://root:root@localhost/test?charset=utf8')
+    ndata = fetch('tmp')
+    # result = get_all('tmp')
+    for i in ndata:
+        # if name == '20201231':
+        fname = i['filename']
+        name = re.findall(r'\d+',fname)[0]
+        file = parse(downdir='tmp', filename=fname)
         if file is None:
-            print(i)
+            print(fname)
             continue
-        file.to_sql(name, engine, if_exists='replace', index=True, dtype={'code': sqlalchemy.types.VARCHAR(10),'report_date':sqlalchemy.types.Date()})
+        insert(file,engine,name)
